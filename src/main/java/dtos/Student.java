@@ -11,15 +11,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Student implements Serializable {
 	@XmlElement(name = "name")
-
 	private String name;
 
 	@XmlElement(name = "age")
-
 	private Integer age;
 
 	@XmlElement(name = "avrageMarks")
-
 	private Double avrageMarks;
 
 	public String getName() {
