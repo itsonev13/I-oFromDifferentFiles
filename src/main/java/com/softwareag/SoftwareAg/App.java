@@ -6,6 +6,7 @@ import java.util.Scanner;
 import Exceptions.IncorrectExtensionException;
 import Exceptions.NotSupportedMediaTypeException;
 import IOOperations.BinarySearch;
+import IOOperations.HTMLSearch;
 import IOOperations.TxtSearch;
 import IOOperations.XMLSearch;
 
@@ -43,7 +44,8 @@ public class App {
 			break;
 		case ".html":
 		case ".htm":
-			System.out.println("htm test");
+			HTMLSearch htmlSearch = new HTMLSearch();
+			htmlSearch.search(word, path, extension);
 			break;
 		case ".bin":
 			BinarySearch binarySearch = new BinarySearch();
