@@ -38,7 +38,7 @@ public class XMLSearch implements Search {
 		} catch (javax.xml.bind.UnmarshalException e) {
 		} catch (JAXBException e) {
 		} catch (java.lang.IllegalArgumentException e) {
-			fileTraveres(word, path, extension);
+
 		}
 		if (students != null) {
 			for (Student student : students.getEntries()) {
