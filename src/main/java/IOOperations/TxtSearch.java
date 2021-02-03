@@ -44,6 +44,7 @@ public class TxtSearch implements Search {
 		Pattern pattern = null;
 		Matcher matcher = null;
 		try {
+
 			Collection<File> files = FileUtils.listFiles(root, null, true);
 			for (Iterator<File> iterator = files.iterator(); iterator.hasNext();) {
 				File file = (File) iterator.next();
@@ -59,7 +60,12 @@ public class TxtSearch implements Search {
 					}
 				}
 			}
-		} catch (Exception e) {
+			;
+		} catch (java.lang.IllegalArgumentException e) {
+			System.out.println("NO SUCH FILE OR DIRECTORY.Please Try again");
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

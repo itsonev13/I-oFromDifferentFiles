@@ -94,7 +94,13 @@ public class XMLSearch implements Search {
 		Matcher matcher = null;
 		Students students = null;
 		Cars cars = null;
-		Collection<File> files = FileUtils.listFiles(root, null, true);
+		Collection<File> files = null;
+		try {
+			files = FileUtils.listFiles(root, null, true);
+		} catch (java.lang.IllegalArgumentException e) {
+			System.out.println("NO SUCH FILE OR DIRECTORY.Please Try again");
+			return;
+		}
 		for (Iterator<File> iterator = files.iterator(); iterator.hasNext();) {
 			File file = (File) iterator.next();
 			if (file.getName().endsWith(extension)) {
@@ -127,7 +133,6 @@ public class XMLSearch implements Search {
 					cars = xmlparser.parseXml(Cars.class, file.getAbsolutePath());
 				} catch (javax.xml.bind.UnmarshalException e) {
 				} catch (JAXBException e) {
-
 				}
 				if (cars != null) {
 					for (Car car : cars.getEntries()) {

@@ -12,7 +12,13 @@ import IOOperations.XMLSearch;
 
 public class App {
 	public static void main(String[] args) {
-		menu();
+		String exit = null;
+		do {
+			menu();
+			System.out.println("To continue type continue");
+			;
+			exit = new Scanner(System.in).nextLine();
+		} while (exit.equalsIgnoreCase("continue"));
 	}
 
 	private static void menu() {

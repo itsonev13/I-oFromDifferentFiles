@@ -61,6 +61,8 @@ public class HTMLSearch implements Search {
 					}
 				}
 			}
+		} catch (java.lang.IllegalArgumentException e) {
+			System.out.println("NO SUCH FILE OR DIRECTORY.Please Try again");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
