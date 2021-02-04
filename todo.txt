@@ -1,1 +1,0 @@
-izkluchenie pri ne namerena direktoriq ili fail
