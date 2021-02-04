@@ -16,7 +16,6 @@ public class App {
 		do {
 			menu();
 			System.out.println("To continue type continue");
-			;
 			exit = new Scanner(System.in).nextLine();
 		} while (exit.equalsIgnoreCase("continue"));
 	}
