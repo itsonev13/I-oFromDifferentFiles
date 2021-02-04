@@ -7,6 +7,7 @@ import Exceptions.IncorrectExtensionException;
 import Exceptions.NotSupportedMediaTypeException;
 import IOOperations.BinarySearch;
 import IOOperations.HTMLSearch;
+import IOOperations.Search;
 import IOOperations.TxtSearch;
 import IOOperations.XMLSearch;
 
@@ -40,20 +41,20 @@ public class App {
 		Scanner input = null;
 		switch (extension) {
 		case ".txt":
-			TxtSearch txtSearch = new TxtSearch();
+			Search txtSearch = new TxtSearch();
 			txtSearch.search(word, path, extension);
 			break;
 		case ".xml":
-			XMLSearch xmlSearch = new XMLSearch();
+			Search xmlSearch = new XMLSearch();
 			xmlSearch.search(word, path, extension);
 			break;
 		case ".html":
 		case ".htm":
-			HTMLSearch htmlSearch = new HTMLSearch();
+			Search htmlSearch = new HTMLSearch();
 			htmlSearch.search(word, path, extension);
 			break;
 		case ".bin":
-			BinarySearch binarySearch = new BinarySearch();
+			Search binarySearch = new BinarySearch();
 			binarySearch.search(word, path, extension);
 			break;
 		}
