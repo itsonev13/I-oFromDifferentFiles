@@ -16,8 +16,6 @@ import org.junit.jupiter.api.Test;
 import IOOperations.XMLSearch;
 
 public class XmlSearchTest {
-
-	private final PrintStream standardOut = System.out;
 	private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
 	@BeforeEach

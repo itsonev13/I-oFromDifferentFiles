@@ -15,7 +15,6 @@ import IOOperations.BinarySearch;
 import inits.BitFile;
 
 public class BinSearchTest {
-	private final PrintStream standardOut = System.out;
 	private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
 	@BeforeEach

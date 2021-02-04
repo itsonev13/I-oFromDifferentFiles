@@ -17,7 +17,6 @@ import IOOperations.TxtSearch;
 
 public class TxtSearchTest {
 
-	private final PrintStream standardOut = System.out;
 	private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
 	@BeforeEach

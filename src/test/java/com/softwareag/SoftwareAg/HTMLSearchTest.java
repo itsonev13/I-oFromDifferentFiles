@@ -16,7 +16,6 @@ import org.junit.jupiter.api.Test;
 import IOOperations.HTMLSearch;
 
 public class HTMLSearchTest {
-	private final PrintStream standardOut = System.out;
 	private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
 	@BeforeEach
