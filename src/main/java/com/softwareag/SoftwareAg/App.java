@@ -1,6 +1,5 @@
 package com.softwareag.SoftwareAg;
 
-import java.io.File;
 import java.util.Scanner;
 
 import Exceptions.IncorrectExtensionException;
@@ -37,8 +36,6 @@ public class App {
 			extension = scanner.nextLine();
 			isValidExtension = isValidExtension(extension);
 		} while (isValidExtension != true);
-		File file = null;
-		Scanner input = null;
 		switch (extension) {
 		case ".txt":
 			Search txtSearch = new TxtSearch();

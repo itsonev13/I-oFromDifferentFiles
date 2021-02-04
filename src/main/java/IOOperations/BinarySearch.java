@@ -17,7 +17,6 @@ public class BinarySearch implements Search {
 		// BitFile bitFile = new BitFile();
 		Pattern pattern = null;
 		Matcher matcher = null;
-		boolean isFolder = false;
 		try {
 			InputStream input = new FileInputStream(path + extension);
 			byte[] bytes = new byte[255];
@@ -29,6 +28,7 @@ public class BinarySearch implements Search {
 					System.out.println("The word " + word + " is found");
 				}
 			}
+			input.close();
 		} catch (FileNotFoundException e) {
 			fileTraveres(word, path, extension);
 		} catch (IOException e) {
@@ -57,6 +57,7 @@ public class BinarySearch implements Search {
 							System.out.println("The word " + word + " is found in file: " + file.getName());
 						}
 					}
+					input.close();
 				}
 			}
 		} catch (java.lang.IllegalArgumentException e) {

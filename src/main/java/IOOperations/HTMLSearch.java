@@ -19,21 +19,17 @@ public class HTMLSearch implements Search {
 	public void search(String word, String path, String extension) {
 		Pattern pattern = null;
 		Matcher matcher = null;
-		boolean isFolder = false;
 		try {
-			if (isFolder == false) {
-				Document doc = Jsoup.parse(new File(path + extension), "UTF-8");
-				Elements elements = doc.getAllElements();
-				for (Element element : elements) {
-					pattern = Pattern.compile(word);
-					matcher = pattern.matcher(element.text());
-					if (matcher.find()) {
-						System.out.println("The word " + word + " is found");
-					}
+			Document doc = Jsoup.parse(new File(path + extension), "UTF-8");
+			Elements elements = doc.getAllElements();
+			for (Element element : elements) {
+				pattern = Pattern.compile(word);
+				matcher = pattern.matcher(element.text());
+				if (matcher.find()) {
+					System.out.println("The word " + word + " is found");
 				}
 			}
 		} catch (FileNotFoundException e) {
-			isFolder = true;
 			fileTraveres(word, path, extension);
 		} catch (IOException e) {
 

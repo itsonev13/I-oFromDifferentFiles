@@ -17,21 +17,17 @@ public class TxtSearch implements Search {
 		Pattern pattern = null;
 		Matcher matcher = null;
 		Scanner input = null;
-		boolean isFolder = false;
 		try {
 			input = new Scanner(new File(path + extension));
-			if (isFolder == false) {
-				while (input.hasNextLine()) {
-					data = input.nextLine();
-					pattern = Pattern.compile(word);
-					matcher = pattern.matcher(data);
-					if (matcher.find()) {
-						System.out.println("The word " + word + " is found");
-					}
+			while (input.hasNextLine()) {
+				data = input.nextLine();
+				pattern = Pattern.compile(word);
+				matcher = pattern.matcher(data);
+				if (matcher.find()) {
+					System.out.println("The word " + word + " is found");
 				}
 			}
 		} catch (FileNotFoundException e) {
-			isFolder = true;
 			fileTraveres(word, path, extension);
 		}
 
@@ -44,7 +40,6 @@ public class TxtSearch implements Search {
 		Pattern pattern = null;
 		Matcher matcher = null;
 		try {
-
 			Collection<File> files = FileUtils.listFiles(root, null, true);
 			for (Iterator<File> iterator = files.iterator(); iterator.hasNext();) {
 				File file = (File) iterator.next();
