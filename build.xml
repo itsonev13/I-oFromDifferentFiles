@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default ="run" name="SoftwareAG ANT">
+	<target name="run" depends="compile">
+	<fileset dir="C:\Users\IVAN\.m2\repository" includes="**/*.jar"></fileset>
+	</target>
+
+<target name="compile">
+<javac includeantruntime = "false" srcdir="./src" destdir="staging"/>
+<fileset dir="C:\Users\IVAN\.m2\repository" includes="**/*.jar"></fileset>
+</target>
+</project>

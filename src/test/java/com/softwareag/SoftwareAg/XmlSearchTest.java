@@ -106,7 +106,7 @@ public class XmlSearchTest {
 		// arrange
 		XMLSearch search = new XMLSearch();
 		// act
-		search.search("Rick Grimes", "D:\\Programing test\\java", ".xml");
+		search.search("Rick Grimes", "../", ".xml");
 		// assert
 		assertTrue(outputStreamCaptor.toString().trim().startsWith("The word Rick Grimes is found"));
 	}

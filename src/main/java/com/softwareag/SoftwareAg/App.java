@@ -13,11 +13,34 @@ import IOOperations.XMLSearch;
 public class App {
 	public static void main(String[] args) {
 		String exit = null;
-		do {
-			menu();
-			System.out.println("To continue type continue");
-			exit = new Scanner(System.in).nextLine();
-		} while (exit.equalsIgnoreCase("continue"));
+//		do {
+//			menu();
+//			System.out.println("To continue type continue");
+//			exit = new Scanner(System.in).nextLine();
+//		} while (exit.equalsIgnoreCase("continue"));
+		menuWithCommandLineArgs(args[0], args[1], args[2]);
+	}
+
+	private static void menuWithCommandLineArgs(String word, String path, String extension) {
+		switch (extension) {
+		case ".txt":
+			Search txtSearch = new TxtSearch();
+			txtSearch.search(word, path, extension);
+			break;
+		case ".xml":
+			Search xmlSearch = new XMLSearch();
+			xmlSearch.search(word, path, extension);
+			break;
+		case ".html":
+		case ".htm":
+			Search htmlSearch = new HTMLSearch();
+			htmlSearch.search(word, path, extension);
+			break;
+		case ".bin":
+			Search binarySearch = new BinarySearch();
+			binarySearch.search(word, path, extension);
+			break;
+		}
 	}
 
 	private static void menu() {

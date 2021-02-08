@@ -27,6 +27,7 @@ public class TxtSearch implements Search {
 					System.out.println("The word " + word + " is found");
 				}
 			}
+			input.close();
 		} catch (FileNotFoundException e) {
 			fileTraveres(word, path, extension);
 		}

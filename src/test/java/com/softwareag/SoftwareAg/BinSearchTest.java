@@ -38,7 +38,7 @@ public class BinSearchTest {
 		// arrange
 		BinarySearch search = new BinarySearch();
 		// act
-		search.search("journey", "D:\\Programing test\\java", ".bin");
+		search.search("journey", "../", ".bin");
 		// assert
 		assertTrue(outputStreamCaptor.toString().trim().startsWith("The word journey is found"));
 	}

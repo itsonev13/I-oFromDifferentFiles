@@ -136,7 +136,7 @@ public class HTMLSearchTest {
 		// arrange
 		HTMLSearch search = new HTMLSearch();
 		// act
-		search.search("Jordan", "D:\\Programing test\\java", ".html");
+		search.search("Jordan", "../", ".html");
 		// assert
 		assertTrue(outputStreamCaptor.toString().trim().startsWith("The word Jordan is found"));
 	}

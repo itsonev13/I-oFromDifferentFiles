@@ -46,7 +46,7 @@ public class TxtSearchTest {
 		// arrange
 		TxtSearch search = new TxtSearch();
 		// act
-		search.search("hello", "D:\\Programing test\\java\\SoftwareAg", ".txt");
+		search.search("hello", "../", ".txt");
 		// assert
 		assertTrue(outputStreamCaptor.toString().trim().startsWith("The word hello is found"));
 	}
